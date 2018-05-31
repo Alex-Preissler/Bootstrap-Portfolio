@@ -6,6 +6,12 @@ body {
   background: url("../images/concrete_seamless.png");
 }
 
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -50,6 +56,8 @@ h3 {
   font-size: 22px;
 }
 
+
+
 /* header */
 
 #masthead {
@@ -65,8 +73,10 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
+  max-width: 100%;
+  width:278px;
   height: 90px;
+  padding: 0px 10px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
@@ -134,12 +144,19 @@ h3, h2 {
   border: 1px solid #ddd;
 }
 
+#mainimg{
+  max-width: 50%;
+  height: auto;
+  margin-right: 5%;
+  
+}
+
 /* portfolio page */
 
 .work {
   position: relative;
   float: left;
-  width: 274px;
+  max-width: 100%;
   margin: 20px 0 25px;
   overflow: auto;
 }
@@ -149,7 +166,7 @@ h3, h2 {
 }
 
 .work img {
-  width: 100%;
+  max-width: 100%;
   border: 0 none;
   opacity: 0.8;
 }
@@ -215,3 +232,59 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
+
+#Aboutme{
+  color: #4aaaa5;
+}
+
+
+
+@media screen and (max-width: 979px) {
+
+  #mainimg{
+    max-width: 50%;
+    height: auto;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    
+  }
+
+
+    
+  
+
+}
+
+@media screen and (max-width: 767px) {
+
+    #logo-bar{
+      background-color: #4aaaa5;
+      text-align: center;
+  }
+
+  #logo{
+    float: none;
+    padding: 0;
+
+  }
+
+
+  nav {
+    float: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+ #a1 {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ #mainimg{
+   max-width: 100%;
+   height: auto;
+ }
+ 
+}
+
